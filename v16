@@ -11,9 +11,7 @@ while running:
     choice = choice.strip()
     choice = choice.upper()
     if choice == "Y":
-        yes_command = input(
-            "Enter the name of the item you want to add you want to add: "
-        )
+        yes_command = input("Enter the name of the item you want to add you want to add: ")
         yes_command = yes_command.strip()
         yes_command = yes_command.upper()
         grocery_list.append(yes_command)
@@ -25,15 +23,11 @@ print(grocery_list)
 
 # remove items
 while second_running:
-    second_choice = input(
-        "Do you want to remove something from the list(Y/N): "
-    )
+    second_choice = input("Do you want to remove something from the list(Y/N): ")
     second_choice = second_choice.strip()
     second_choice = second_choice.upper()
     if second_choice == "Y":
-        second_yes_command = input(
-            "Enter the name of the item you want to add: "
-        )
+        second_yes_command = input("Enter the name of the item you want to add: ")
         second_yes_command = second_yes_command.strip()
         second_yes_command = second_yes_command.upper()
         if second_yes_command in grocery_list:
@@ -51,10 +45,8 @@ print(grocery_list)
 
 # edit an item
 while third_running:
-    question = input(
-        "Would you like to edit a pre-existing item from the list(Y/N): "
-    )
-    question = question.capitalize()
+    question = input("Would you like to edit a pre-existing item from the list(Y/N): ")
+    question = question.upper()
     question = question.strip()
     if question == "Y":
         question3 = input("Enter the number of item you would like to edit: ")
@@ -62,9 +54,7 @@ while third_running:
         question3 = question3 - 1
         item_base = len(grocery_list)
         if 0 <= question3 < item_base:
-            question2 = input(
-                "Enter the new data for item number you want to change: "
-            )
+            question2 = input("Enter the new data for item number you want to change: ")
             question2 = question2.strip()
             question2 = question2.capitalize()
             grocery_list[question3] = question2
